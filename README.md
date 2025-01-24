@@ -1,4 +1,7 @@
-![image](https://github.com/user-attachments/assets/c761dc78-a693-4931-8a17-992c42f6602e)# Habit_Tracker
+![image](https://github.com/user-attachments/assets/c761dc78-a693-4931-8a17-992c42f6602e)
+
+
+# Habit_Tracker
 A simple and intuitive website to track your activities.  
 Built using **Python, Flask, Bootstrap, HTML, CSS, and JavaScript**, this tool allows users to set goals, monitor progress, and stay consistent with their routines.
 
