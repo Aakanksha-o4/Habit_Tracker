@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>
+        {% block title %}
+            
+        {% endblock title %} - MyHabit Tracker
+    </title>
+    <style>
+      html,body {
+        background: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe') no-repeat center center fixed;
+        background-size: cover; /* Ensure the image covers the entire screen */
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* Make sure it takes full height */
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        color: white;  /* Adjust text color for better visibility */
+        text-align: center;
+        padding-top: 50px;
+    }
+    </style>
+  
+  </head>
+  <body>
+   
+   {% block body %}
+    
+   {% endblock body %}
+   <script>
+    
+     function redirectToHabits() {
+        // Perform form submission
+        document.querySelector("form").submit();
+        // Redirect to /habits page
+        window.location.href = "/habits";
+    }
+    function clearForm() {
+        document.getElementById("name").value = "";  // Clear habit name
+        document.getElementById("frequency").selectedIndex = 0;  // Reset dropdown
+        document.getElementById("status").selectedIndex = 0;  // Reset dropdown
+    }
+</script>
+</body>

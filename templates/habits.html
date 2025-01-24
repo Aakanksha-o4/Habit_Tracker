@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}
+  Habit list
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+<div class="col-md-9 offset-md-2">
+<h3 class="container">Your Tracked Habits</h3>
+{% if habits %}
+
+<table class="table table-striped table-hover mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Habit</th>
+            <th scope="col">Frequency</th>
+            <th scope="col">Status</th>
+            <th scope="col">Date Added</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for habit in habits %}
+        <tr><b>
+            <td>{{ loop.index }}</td>
+            <td>{{ habit.name }}</td>
+            <td>{{ habit.frequency }}</td>
+            <td>{{ habit.status }}</td>
+            <td>{{ habit.date.strftime('%Y-%m-%d')}}</td>
+            <td>
+                <a href="/delete/{{ habit.sno}}" type="button" class="btn btn-outlinr-danger btn-sm">Delete </button>
+
+            </td></b>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+<div class="alert alert-warning mt-3">No habits tracked yet. Add a new habit.</div>
+{% endif %}
+</div>
+<div class="text-center mt-4">
+    <a href="/" class="btn btn-outline-primary">Back to Home</a>
+</div>
+
+
+          </tbody>
+      </table>
+</div>
+</div>
+{% endblock body %}
+</html>
