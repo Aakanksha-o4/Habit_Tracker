@@ -18,4 +18,4 @@ Built using **Python, Flask, Bootstrap, HTML, CSS, and JavaScript**, this tool a
 - **Version Control:** Git & GitHub
 
 
-![Habit Tracker Homepage]()
+
